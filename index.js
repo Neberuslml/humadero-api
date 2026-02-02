@@ -7,8 +7,6 @@ app.get('/', (req, res) => {
   res.send('Humadero API funcionando 🔥');
 });
 
-const PORT = process.env.PORT || 3000;
-
 app.get('/menu', (req, res) => {
   res.json({
     comida: [
@@ -27,8 +25,7 @@ app.get('/menu', (req, res) => {
   });
 });
 
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`API escuchando en puerto ${PORT}`);
-
 });
